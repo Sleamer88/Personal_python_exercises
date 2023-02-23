@@ -33,9 +33,9 @@ is not  Negated object identity
 # Boolean
 
 """
-or  x or y    Either x or y is True
-and  x and y    Both x and y are True
-not  not x    x is not True
+or:  x or y    Either x or y is True
+and:  x and y    Both x and y are True
+not:  not x    x is not True
 """
 
 num = 10
