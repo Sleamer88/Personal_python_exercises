@@ -1,4 +1,14 @@
 # This is a Python comment in my first Python app.
+# This variable contains an integer
+quantity = 10
+# quantity = 14
+# This variable contains a float
+unit_price = 1.99
+# unit_price = 26.99
+# This variable contains the result of multiplying quantity times unit price
+extended_price = quantity * unit_price
+# Show the results
+print(f"The extended price is: {extended_price}")
 
 """This is a multiline comment in Python
 This type of comment is sometimes called a Docstring.
