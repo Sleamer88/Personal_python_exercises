@@ -93,7 +93,7 @@ math.radians(x)     |  Converts angle x from degrees to radians
 math.sin(x)         |  Returns the sine of x, in radians
 math.sqrt(x)        |  Returns the square of root x
 math.tan(x)         |  Returns the tangent of x radians
-math.tau()         |  Returns the mathematical constant tau(6.283185...)
+math.tau()          |  Returns the mathematical constant tau(6.283185...)
 
 The constants pi,e and tau are unusual for functions in that you don't use parentheses.
 """
