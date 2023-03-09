@@ -227,9 +227,105 @@ print(output)
 # colon.
 
 # We can only use .2f on a number, but we can't attach $ to a number without making it a string, but then .2f wouldn't work,
-# therefore
+# therefore we can convert each dollar amount to a string in the current format, stick the dollar sign on that string, and then
+# format the width and alignment on this string.
 
+# subtotal = 1598.402 would be 1,598.40 with the .2f method
+# s_subtotal = "$" + f"{subtotal:,.2f}"
+# The s_ before subtotal is to represent that the output is a string, no longer a number
+
+# The output will be a string instead of a number because an f-string always produces a string
+# The next part of the code sticks (concatenates) a dollar sign in front: "$" + so now the output would be $1,598.40
+
+# To display the dollar amount right aligned with a width of 9 digits, use >9 in a new format string to display the s_subtotal variable
+
+# e.g. f{s_subtotal:>9}
+
+# When you use + with string, you concatenate (join) both string together, the + only does addition with numbers, not strings
+
+
+# Numerical values
+unit_price = 49.95
+quantity = 32
+sales_tax_rate = 0.065
+subtotal = quantity * unit_price
+sales_tax = sales_tax_rate * subtotal
+total = subtotal + sales_tax
+
+# Format amounts to show as a string with leading dollar sign
 s_subtotal = "$" + f"{subtotal:,.2f}"
+s_sales_tax = "$" + f"{sales_tax:,.2f}"
+s_total = "$" + f"{total:,.2f}"
+
+# Output the strong with a dollar sign already attached
+output = f"""
+string_Subtotal:  {s_subtotal:>9}
+string_Sales Tax: {s_sales_tax:>9}
+string_Total:     {s_total:>9}
+\n\n
+"""
+print(output)
+
+
+"Grappling with Weirder Numbers"
+
+"Python for Base 2,8, and 16 Numbers"
+
+"""
+System   |    Also Called       |          Digits Used              |  Symbol  |  Function
+
+Base 2   |  Binary              |               0,1                 |    Ob    |    bin()
+Base 8   |  Octal               |        0,1,2,3,4,5,6,7            |    Oo    |    oct()
+Base 16  |  Hexadecimal or hex  |  0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F  |    Ox    |    hex()
+"""
+
+
+print(hex(255))
+print(0xff)
+
+x = 255
+# Convert decimal to other number system
+print(bin(x))
+print(oct(x))
+print(hex(x))
+
+# Show number in decimal number system (no conversion required)
+
+print(0b111111111)
+print(0o377)
+print(0xff, "\n\n")
+
+
+"Complex numbers"
+
+# A complex number is a number that can be expressed as a+bi where a and b are real numbers and i is the imaginary number satisfied
+# by the equation x^2 = -1, there is no real number whose x equals -1, therefore it is called an "imaginary" number
+# Usually an imaginary number is represented with i, however in python it is represented with j
+# The complex() function can be used to generate an imaginary number:
+# e.g. complex<real,imaginary>
+# e.g. complex<2,-3>
+"""
+z = 2-3j
+print(z)
+
+We can tack .real or .imag numbers onto an imaginary number to get the rea lor imaginary part, for example the following print
+statement produces 2,0 which is the real part of number z
+
+print(z.real)
+
+The following statement returns -3,0 which is the imaginary part of z
+
+print(z.imag)
+
+Search for python cmath module to learn more about complex numbers
+"""
+
+
+
+
+
+
+
 
 
 
